@@ -22,3 +22,8 @@ ALTER TABLE animals ADD  FOREIGN KEY(species_id) REFERENCES species(id);
 ALTER TABLE animals ADD owner_id INT;
 ALTER TABLE animals ADD  FOREIGN KEY(owner_id) REFERENCES owners(id);
 
+
+
+CREATE TABLE vets (id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY, name VARCHAR(100),age INT, date_of_graduation DATE);
+CREATE TABLE specializations ( id INT GENERATED ALWAYS AS IDENTITY, vet_id INT , species_id INT, UNIQUE(id));
+CREATE TABLE visits ( id INT GENERATED ALWAYS AS IDENTITY, vet_id INT , animal_id INT, UNIQUE(id));

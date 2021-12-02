@@ -28,3 +28,4 @@ SELECT COUNT(a.name), s.name FROM animals a JOIN species s ON s.id = a.species_i
 SELECT a.name, o.full_name FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Jennifer Orwell';
 SELECT a.name, o.full_name FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Dean Winchester' AND ecape_attempts = 0;
 SELECT COUNT(a.name), o.full_name FROM animals a JOIN owners o ON a.owner_id = o.id GROUP BY (o.full_name) ORDER BY count DESC LIMIT 1;
+
