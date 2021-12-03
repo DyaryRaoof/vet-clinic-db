@@ -14,6 +14,7 @@ INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VA
 INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VALUES ('Plantmon', To_DATE('11,15,2022', 'MM, DD, YY'), 2 ,true,-5.7);
 INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VALUES ('Squirtle', To_DATE('4,2,1993', 'MM, DD, YY'), 3 ,false,-12.13);
 INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VALUES ('Angemon', To_DATE('6,12,2005', 'MM, DD, YY'), 1 ,true,-45);
+INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VALUES ('Boarmon', To_DATE('6,7,2005', 'MM, DD, YY'), 7 ,true,20.4);
 INSERT INTO animals (name, date_of_birth, ecape_attempts, neutered, weight_kg)VALUES ('Blossom', To_DATE('10,13,1998', 'MM, DD, YY'), 3,true,17);
 
 BEGIN;
@@ -49,3 +50,30 @@ UPDATE animals SET owner_id = 2 WHERE name IN ('Gabumon', 'Pikachu');
 UPDATE animals SET owner_id = 3 WHERE name IN ('Devimon', 'Plantmon');
 UPDATE animals SET owner_id = 4 WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id = 5 WHERE name IN ('Angemon', 'Boarmon');
+
+
+INSERT INTO vets (name, age , date_of_graduation) VALUES ('William Tatcher' , 45, TO_DATE('4,23,2000', 'MM,DD,YY')),('Maisy Smith', 26, TO_DATE('1,17,2019', 'MM,DD,YY')),('Stephanie Mendez', 64 , TO_DATE('5,4,1981', 'MM,DD,YY')), ('Jack Harkness', 38 , TO_DATE('6,8,2008', 'MM,DD,YY'));
+INSERT INTO specializations ( vet_id, species_id) VALUES (1,1), (3,2),(4,2);
+
+
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (1,1,TO_DATE('5,24,2020','MM,DD,YY'));
+
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (3,1,TO_DATE('7,22,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (4,2,TO_DATE('2,2,2021','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (2,3,TO_DATE('1,5,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (2,3,TO_DATE('3,8,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (2,3,TO_DATE('5,14,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (3,4,TO_DATE('5,4,2021','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(4,5,TO_DATE('2,24,2021','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,6,TO_DATE('12,21,2019','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(1,6,TO_DATE('8,10,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,6,TO_DATE('4,7,2021','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(3,7,TO_DATE('9,29,2019','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(4,8,TO_DATE('3,10,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(4,8,TO_DATE('4,11,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,9,TO_DATE('1,24,2019','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,9,TO_DATE('5,15,2019','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,9,TO_DATE('2,27,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(2,9,TO_DATE('8,3,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(3,10,TO_DATE('5,24,2020','MM,DD,YY'));
+INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES(1,10,TO_DATE('1,11,2021','MM,DD,YY'));
