@@ -57,7 +57,6 @@ INSERT INTO specializations ( vet_id, species_id) VALUES (1,1), (3,2),(4,2);
 
 
 INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (1,1,TO_DATE('5,24,2020','MM,DD,YY'));
-
 INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (3,1,TO_DATE('7,22,2020','MM,DD,YY'));
 INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (4,2,TO_DATE('2,2,2021','MM,DD,YY'));
 INSERT INTO visits ( vet_id, animal_id , date_of_visit ) VALUES (2,3,TO_DATE('1,5,2020','MM,DD,YY'));

@@ -29,3 +29,15 @@ SELECT a.name, o.full_name FROM animals a JOIN owners o ON o.id = a.owner_id WHE
 SELECT a.name, o.full_name FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Dean Winchester' AND ecape_attempts = 0;
 SELECT COUNT(a.name), o.full_name FROM animals a JOIN owners o ON a.owner_id = o.id GROUP BY (o.full_name) ORDER BY count DESC LIMIT 1;
 
+
+
+SELECT * FROM visits v JOIN animals a ON v.animal_id = a.id WHERE vet_id = 1 ORDER BY date_of_visit DESC LIMIT 1;
+SELECT COUNT(v.animal_id) FROM visits v JOIN animals a ON v.animal_id = a.id WHERE vet_id = 3;
+SELECT * FROM vets v RIGHT JOIN specializations s where v.id = s.vet_id; 
+SELECT t1.name , s.name FROM (SELECT * FROM vets v LEFT JOIN specializations s ON v.id = s.vet_id) t1 LEFT JOIN species s ON s.id = t1.species_id;
+SELECT a.name, v.date_of_visit FROM visits v JOIN animals a ON v.animal_id = a.id WHERE vet_id = 3 AND (v.date_of_visit BETWEEN '4,1,2020' AND '8,30,2020');
+SELECT COUNT(v.animal_id), a.name FROM visits v JOIN animals a ON v.animal_id = a.id GROUP BY (a.name) ORDER BY count DESC LIMIT 1 ;
+SELECT a.name, v.date_of_visit FROM visits v JOIN animals a ON v.animal_id = a.id WHERE vet_id = 2 ORDER BY v.date_of_visit LIMIT 1;
+SELECT * FROM (SELECT * FROM visits v JOIN animals a ON v.animal_id = a.id ORDER BY date_of_visit  DESC LIMIT 1) t1 JOIN vets v ON t1.vet_id = v.id;
+SELECT COUNT(v.id) FROM (SELECT v.id , v.name FROM vets v LEFT JOIN specializations s on v.id = s.vet_id WHERE s.vet_id IS NULL ) t1 JOIN visits v ON v.vet_id = t1.id;
+SELECT COUNT(s.name), s.name FROM (SELECT * FROM visits v JOIN animals a ON v.animal_id = a.id WHERE v.vet_id = 2) t1 JOIN species s ON t1.species_id = s.id GROUP BY s.name ORDER BY count DESC LIMIT 1;
