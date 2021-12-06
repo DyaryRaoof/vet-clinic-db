@@ -41,3 +41,13 @@ SELECT a.name, v.date_of_visit FROM visits v JOIN animals a ON v.animal_id = a.i
 SELECT * FROM (SELECT * FROM visits v JOIN animals a ON v.animal_id = a.id ORDER BY date_of_visit  DESC LIMIT 1) t1 JOIN vets v ON t1.vet_id = v.id;
 SELECT COUNT(v.id) FROM (SELECT v.id , v.name FROM vets v LEFT JOIN specializations s on v.id = s.vet_id WHERE s.vet_id IS NULL ) t1 JOIN visits v ON v.vet_id = t1.id;
 SELECT COUNT(s.name), s.name FROM (SELECT * FROM visits v JOIN animals a ON v.animal_id = a.id WHERE v.vet_id = 2) t1 JOIN species s ON t1.species_id = s.id GROUP BY s.name ORDER BY count DESC LIMIT 1;
+
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT vet_id FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+EXPLAIN ANALYZE SELECT COUNT(animal_id) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT COUNT(vet_id) FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
