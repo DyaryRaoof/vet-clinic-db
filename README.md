@@ -2,6 +2,11 @@
 
 > This a project to practice manipulation of SQL databases using PostgreSQL as part of microverse curriculum.
 
+# ERD Screenshot
+![screenshot](./screenshot1.png)
+# ERD Llink
+https://drawsql.app/dyary/diagrams/vet-clinic
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
