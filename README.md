@@ -3,7 +3,7 @@
 > This a project to practice manipulation of SQL databases using PostgreSQL as part of microverse curriculum.
 
 # ERD Screenshot
-![screenshot](./screenshot1.png)
+![screenshot](./ERD.png)
 # ERD Llink
 https://drawsql.app/dyary/diagrams/vet-clinic
 
